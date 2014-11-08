@@ -1,0 +1,9 @@
+body {
+	width: 75%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-left: 1em;
+}
+#colortheory {
+	border : 1px black;
+	width: 35rem;
+}

@@ -18,4 +18,6 @@ def index(request):
 
 
 def about(request):
-	return HttpResponse('Rango says: Here is the about page. <a href="/rango/">Home</a>')
+	# return HttpResponse('Rango says: Here is the about page. <a href="/rango/">Home</a>')
+	context = RequestContext(request)
+	return render_to_response('rango/about.html', context)
