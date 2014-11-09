@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-
-{% load static %}
-
-<html>
-	<head>
-		<title>Rango - About</title>
-		<link rel="stylesheet" href="{% static "css/base.css" %}" />
-	</head>
+{% extends 'rango/base.html' %}
+{%  load static %}
+{% block content %}
 
 	<body>
 		<h1>About</h1>
@@ -14,4 +8,5 @@
 		<p>This is my first Django project! Go <a href="/rango/">home</a>.</p>
 		<img src="{% static "colortheory.jpg" %}" alt="Color theory diagram" id="colortheory"/>
 	</body>
-</html>
+
+{% endblock %}
