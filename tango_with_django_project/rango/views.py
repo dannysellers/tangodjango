@@ -3,6 +3,7 @@ from models import Category
 from models import Page
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+import forms
 
 
 def index(request):
@@ -65,3 +66,24 @@ def category(request, category_name_url):
 		pass
 
 	return render_to_response('rango/category.html', context_dict, context)
+
+
+def add_category(request):
+	context = RequestContext(request)
+
+	if request.method == 'POST':
+		form = forms.CategoryForm(request.POST)
+
+		if form.is_valid():
+			# If the form is valid, write to db
+			form.save(commit=True)
+
+			# Return to homepage
+			return index(request)
+		else:
+			print form.errors
+	else:
+		# If the request was not POST, display the form to enter details
+		form = forms.CategoryForm()
+
+	return render_to_response('rango/add_category.html', {'form': form}, context)
