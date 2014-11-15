@@ -26,25 +26,35 @@ def populate ():
 
 	add_page(cat = django_cat,
 			 title = "Official Django Tutorial",
-			 url = "https://docs.djangoproject.com/en/1.5/intro/tutorial01/")
+			 url = "https://docs.djangoproject.com/en/1.5/intro/tutorial01/",
+			 likes = 50,
+			 views = 123)
 
 	add_page(cat = django_cat,
 			 title = "Django Rocks",
-			 url = "http://www.djangorocks.com/")
+			 url = "http://www.djangorocks.com/",
+			 likes = 482,
+			 views = 103)
 
 	add_page(cat = django_cat,
 			 title = "How to Tango with Django",
-			 url = "http://www.tangowithdjango.com/")
+			 url = "http://www.tangowithdjango.com/",
+			 likes = 75,
+			 views = 101)
 
 	frame_cat = add_cat("Other Frameworks")
 
 	add_page(cat = frame_cat,
 			 title = "Bottle",
-			 url = "http://bottlepy.org/docs/dev/")
+			 url = "http://bottlepy.org/docs/dev/",
+			 likes = 10,
+			 views = 5)
 
 	add_page(cat = frame_cat,
 			 title = "Flask",
-			 url = "http://flask.pocoo.org")
+			 url = "http://flask.pocoo.org",
+			 likes = 74,
+			 views = 28)
 
 
 def add_page(cat, title, url, likes = 0, views = 0):
