@@ -4,3 +4,7 @@ body {
 	padding-left: 1em;
 	/*background-color : #95a5a6;*/
 }
+ul.errorlist {
+	list-style: none;
+	color: red;
+}
